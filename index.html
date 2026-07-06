@@ -39,6 +39,8 @@
   .nav-links a:hover { color: var(--rosa-oscuro); }
   .cart-btn { position: relative; background: var(--rosa-oscuro); color: white; border: none; border-radius: 50px; padding: 10px 20px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px; }
   .cart-btn:hover { background: var(--acento); transform: translateY(-1px); }
+  .account-btn { background: white; color: var(--texto); border: 1.5px solid var(--rosa-soft); border-radius: 50px; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px; }
+  .account-btn:hover { border-color: var(--rosa-oscuro); color: var(--rosa-oscuro); }
   .cart-count { background: white; color: var(--rosa-oscuro); border-radius: 50%; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
   .hero { max-width: 1200px; margin: 0 auto; padding: 70px 24px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
   .hero-text h1 { font-family: var(--serif); font-size: clamp(2.5rem,5vw,4rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 20px; }
@@ -153,7 +155,9 @@
   .checkout-head h1 em { font-style: italic; color: var(--rosa-oscuro); }
   .checkout-head p { color: var(--texto-suave); margin-top: 8px; }
   .form-card { background: white; border-radius: 18px; padding: 32px; box-shadow: var(--shadow-soft); margin-bottom: 24px; }
-  .form-card h3 { font-family: var(--serif); font-size: 1.3rem; margin-bottom: 20px; }
+  .form-card h3 { font-family: var(--serif); font-size: 1.3rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .required-tag { font-family: var(--sans); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--acento); background: var(--rosa-palido); padding: 3px 10px; border-radius: 20px; }
+  .checkout-error { background: #FCE8E8; color: #B33A3A; border-radius: 8px; padding: 10px 14px; font-size: 0.85rem; margin-top: 6px; }
   .field { margin-bottom: 18px; }
   .field label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--texto); margin-bottom: 6px; }
   .field input { width: 100%; border: 1px solid var(--rosa-soft); border-radius: 10px; padding: 12px 14px; font-family: var(--sans); font-size: 0.95rem; color: var(--texto); }
@@ -195,6 +199,24 @@
   .copy-btn { background: var(--rosa-palido); color: var(--rosa-oscuro); border: none; border-radius: 8px; padding: 4px 12px; font-size: 0.75rem; font-weight: 600; cursor: pointer; margin-left: 10px; transition: all 0.2s; }
   .copy-btn:hover { background: var(--rosa-soft); }
   .transfer-note { background: var(--rosa-palido); border-left: 3px solid var(--rosa-oscuro); padding: 16px 18px; border-radius: 8px; font-size: 0.9rem; color: var(--texto); margin-bottom: 24px; }
+  .account-wrap { max-width: 560px; margin: 0 auto; padding: 50px 24px 80px; }
+  .account-head { text-align: center; margin-bottom: 30px; }
+  .account-head h1 { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; }
+  .account-head h1 em { font-style: italic; color: var(--rosa-oscuro); }
+  .account-head p { color: var(--texto-suave); margin-top: 8px; }
+  .account-error { background: #FCE8E8; color: #B33A3A; border-radius: 8px; padding: 10px 14px; font-size: 0.85rem; margin-bottom: 14px; }
+  .account-note { text-align: center; font-size: 0.8rem; color: var(--texto-suave); margin-top: 14px; }
+  .loyalty-card { background: linear-gradient(135deg, var(--rosa-oscuro), var(--acento)); color: white; border-radius: 18px; padding: 26px; margin-bottom: 24px; box-shadow: var(--shadow-md); }
+  .loyalty-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+  .loyalty-count { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; }
+  .loyalty-label { font-size: 0.85rem; opacity: 0.9; max-width: 140px; text-align: right; }
+  .stamp-row { display: flex; gap: 8px; margin-bottom: 14px; }
+  .stamp { flex: 1; aspect-ratio: 1; border-radius: 50%; background: rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; border: 2px dashed rgba(255,255,255,0.5); }
+  .stamp.filled { background: white; color: var(--rosa-oscuro); border-style: solid; border-color: white; }
+  .loyalty-msg { font-size: 0.88rem; opacity: 0.95; }
+  .history-list { list-style: none; }
+  .history-list li { padding: 10px 0; border-bottom: 1px solid var(--crema-tibia); font-size: 0.88rem; display: flex; justify-content: space-between; }
+  .history-list li:last-child { border-bottom: none; }
   .confirm-wrap { max-width: 560px; margin: 0 auto; padding: 80px 24px; text-align: center; }
   .check-circle { width: 90px; height: 90px; background: var(--verde); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 28px; animation: popIn 0.5s ease; }
   @keyframes popIn { 0%{transform:scale(0);} 70%{transform:scale(1.1);} 100%{transform:scale(1);} }
@@ -265,7 +287,10 @@
       <a onclick="goTo('faq')">Preguntas frecuentes</a>
       <a onclick="goTo('policy')">Devoluciones</a>
     </nav>
-    <button class="cart-btn" onclick="goToCart()">&#128722; <span class="cart-count" id="cartCount">0</span></button>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <button class="account-btn" onclick="openAccount()" id="accountBtnHeader">&#128100; <span id="accountBtnLabel">Mi cuenta</span></button>
+      <button class="cart-btn" onclick="goToCart()">&#128722; <span class="cart-count" id="cartCount">0</span></button>
+    </div>
   </div>
 </header>
 
@@ -286,7 +311,7 @@
     <div class="steps">
       <div class="step"><div class="step-icon">&#127853;</div><h3>Eleg&iacute; tus golosinas</h3><p>Marcas, variedades y gustos espec&iacute;ficos. Vos decid&iacute;s cada detalle.</p></div>
       <div class="step"><div class="step-icon">&#128157;</div><h3>La armamos para vos</h3><p>Tu mix personalizado en tres tama&ntilde;os, con packaging premium.</p></div>
-      <div class="step"><div class="step-icon">&#128676;</div><h3>Te la llevamos</h3><p>Delivery en menos de 2 horas en CABA y GBA, o retiro coordinado.</p></div>
+      <div class="step"><div class="step-icon">&#128757;</div><h3>Te la llevamos</h3><p>Delivery en menos de 2 horas en CABA y GBA, o retiro coordinado.</p></div>
     </div>
   </section>
   <section class="section">
@@ -364,12 +389,22 @@
   <div class="checkout-wrap">
     <span class="back-link" onclick="goTo('builder')">&larr; Volver a mi bolsa</span>
     <div class="checkout-head"><h1>Ya casi <em>listo</em> &#9829;</h1><p>Complet&aacute; tus datos y te llevamos tu bolsa</p></div>
+
     <div class="form-card">
-      <h3>Datos de entrega</h3>
-      <div class="field"><label>Nombre completo</label><input type="text" id="inputName" placeholder="Ej: Sof&iacute;a Mart&iacute;nez"></div>
-      <div class="field"><label>Direcci&oacute;n de entrega</label><input type="text" id="inputAddress" placeholder="Ej: Av. Santa Fe 3400, Palermo"></div>
-      <div class="field"><label>Tel&eacute;fono / WhatsApp</label><input type="tel" id="inputPhone" placeholder="Ej: 11 5555 5555"></div>
-      <div class="field"><label>Email</label><input type="email" id="inputEmail" placeholder="Ej: sofia@email.com"></div>
+      <h3>&iquest;C&oacute;mo quer&eacute;s recibirlo?</h3>
+      <div class="pay-options" id="fulfillOptions">
+        <div class="pay-option selected" data-fulfill="delivery"><div class="pay-radio"></div><div class="pay-info"><div class="name">Delivery</div><div class="desc">Te lo llevamos a tu casa en menos de 2 horas.</div></div><div class="pay-logo">&#128757;</div></div>
+        <div class="pay-option" data-fulfill="pickup"><div class="pay-radio"></div><div class="pay-info"><div class="name">Retiro en punto</div><div class="desc">Coordinamos el retiro por WhatsApp despu&eacute;s de tu compra.</div></div><div class="pay-logo">&#128715;</div></div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3>Tus datos <span class="required-tag">obligatorio</span></h3>
+      <div class="field"><label>Nombre completo *</label><input type="text" id="inputName" placeholder="Ej: Sof&iacute;a Mart&iacute;nez"></div>
+      <div class="field" id="addressField"><label>Direcci&oacute;n de entrega *</label><input type="text" id="inputAddress" placeholder="Ej: Av. Santa Fe 3400, Palermo"></div>
+      <div class="field"><label>Tel&eacute;fono / WhatsApp *</label><input type="tel" id="inputPhone" placeholder="Ej: 11 5555 5555"></div>
+      <div class="field"><label>Email *</label><input type="email" id="inputEmail" placeholder="Ej: sofia@email.com"></div>
+      <div class="checkout-error" id="checkoutError" style="display:none;"></div>
     </div>
     <div class="form-card">
       <h3>Medio de pago</h3>
@@ -384,7 +419,7 @@
       <div class="order-summary">
         <div class="order-line"><span id="coSize">Bolsa Mediana 250g</span><span id="coSubtotal">$3.999</span></div>
         <div class="order-line"><span id="coCandies">0 gustos elegidos</span><span></span></div>
-        <div class="order-line"><span>Env&iacute;o (Rappi &middot; CABA)</span><span>$2.500</span></div>
+        <div class="order-line"><span id="coShippingLabel">Env&iacute;o (Rappi &middot; CABA)</span><span id="coShippingVal">$2.500</span></div>
         <div class="order-line total"><span>Total</span><span id="coTotal">$6.499</span></div>
       </div>
     </div>
@@ -424,7 +459,62 @@
     <p class="txt" id="confirmText">Tu pedido est&aacute; confirmado. Te avisamos por WhatsApp apenas salga tu bolsa. Llega en menos de 2 horas.</p>
     <div class="order-number">Tu pedido <span id="orderNumber">#CC-2026-001</span></div>
     <br>
+    <a href="#" id="confirmWaBtn" target="_blank" rel="noopener" class="btn" style="display:none; margin-bottom:12px; background:#25D366; box-shadow:0 4px 14px rgba(37,211,102,0.35);">&#128172; Coordinar retiro por WhatsApp</a>
+    <br>
     <button class="btn btn-secondary" onclick="resetAndHome()">Volver al inicio</button>
+  </div>
+</main>
+
+<main id="screen-account" class="screen">
+  <div class="account-wrap">
+
+    <!-- Vista: no logueado -->
+    <div id="accountLoggedOut">
+      <div class="account-head">
+        <h1>Candy Crash <em>Club</em> &#9829;</h1>
+        <p>Sum&aacute; sellos con cada compra y canje&aacute; bolsas gratis.</p>
+      </div>
+      <div class="form-card">
+        <h3>Ingres&aacute; o cre&aacute; tu cuenta</h3>
+        <div class="field"><label>Nombre completo</label><input type="text" id="accName" placeholder="Ej: Sof&iacute;a Mart&iacute;nez"></div>
+        <div class="field"><label>Email</label><input type="email" id="accEmail" placeholder="Ej: sofia@email.com"></div>
+        <div class="field"><label>Tel&eacute;fono / WhatsApp</label><input type="tel" id="accPhone" placeholder="Ej: 11 5555 5555"></div>
+        <div class="account-error" id="accError" style="display:none;"></div>
+        <button class="btn btn-large" onclick="loginOrRegister()">Entrar al Club &rarr;</button>
+        <p class="account-note">Si ya ten&eacute;s cuenta, solo complet&aacute; tu email y entramos autom&aacute;ticamente.</p>
+      </div>
+    </div>
+
+    <!-- Vista: logueado -->
+    <div id="accountLoggedIn" style="display:none;">
+      <div class="account-head">
+        <h1>Hola, <em id="accGreetName">Sof&iacute;a</em> &#9829;</h1>
+        <p>Este es tu progreso en el Candy Crash Club.</p>
+      </div>
+      <div class="loyalty-card">
+        <div class="loyalty-top">
+          <div class="loyalty-count"><span id="loyaltyStamps">0</span>/5</div>
+          <div class="loyalty-label">compras hacia tu bolsa gratis</div>
+        </div>
+        <div class="stamp-row" id="stampRow"></div>
+        <div class="loyalty-msg" id="loyaltyMsg">Compr&aacute; una bolsa y sum&aacute; tu primer sello.</div>
+      </div>
+      <div class="form-card">
+        <h3>Tus datos</h3>
+        <div class="order-summary">
+          <div class="order-line"><span>Nombre</span><span id="profName">&mdash;</span></div>
+          <div class="order-line"><span>Email</span><span id="profEmail">&mdash;</span></div>
+          <div class="order-line"><span>Tel&eacute;fono</span><span id="profPhone">&mdash;</span></div>
+          <div class="order-line"><span>Compras realizadas</span><span id="profOrders">0</span></div>
+        </div>
+      </div>
+      <div class="form-card" id="historyCard">
+        <h3>Historial de pedidos</h3>
+        <ul class="history-list" id="historyList"><li class="summary-empty">Todav&iacute;a no hiciste ning&uacute;n pedido.</li></ul>
+      </div>
+      <button class="btn btn-secondary" onclick="logoutAccount()" style="width:100%;">Cerrar sesi&oacute;n</button>
+    </div>
+
   </div>
 </main>
 
@@ -506,7 +596,7 @@
     { variety: 'Clásicos', brand: 'Beldent', shape: 'wrapped', flavors: [ { name: 'Menta', color: '#5FB89A' }, { name: 'Frutilla', color: '#E8536E' }, { name: 'Tutti Frutti', color: '#C879D6' } ] },
   ];
   const sizeData = { chica: { name: 'Chica', weight: '100g', price: 1999, max: 3 }, mediana: { name: 'Mediana', weight: '250g', price: 3999, max: 5 }, grande: { name: 'Grande', weight: '500g', price: 6999, max: 8 } };
-  const state = { size: 'mediana', flavors: [], pay: 'mp', name: '' };
+  const state = { size: 'mediana', flavors: [], pay: 'mp', fulfill: 'delivery', name: '' };
   const SHIPPING = 2500;
   function goTo(screen) { document.querySelectorAll('.screen').forEach(s => s.classList.remove('active')); document.getElementById('screen-' + screen).classList.add('active'); window.scrollTo({ top: 0, behavior: 'instant' }); if (screen === 'checkout') updateCheckout(); }
   function startBuilder(size) { selectSize(size); goTo('builder'); }
@@ -620,12 +710,64 @@
     document.getElementById('cartCount').textContent = state.flavors.length;
     document.getElementById('checkoutBtn').disabled = state.flavors.length === 0;
   }
-  document.querySelectorAll('.pay-option').forEach(opt => { opt.addEventListener('click', () => { document.querySelectorAll('.pay-option').forEach(o => o.classList.remove('selected')); opt.classList.add('selected'); state.pay = opt.dataset.pay; }); });
-  function updateCheckout() { const sd = sizeData[state.size]; document.getElementById('coSize').textContent = 'Bolsa ' + sd.name + ' ' + sd.weight; document.getElementById('coSubtotal').textContent = fmt(sd.price); document.getElementById('coCandies').textContent = state.flavors.length + ' ' + (state.flavors.length === 1 ? 'gusto elegido' : 'gustos elegidos'); document.getElementById('coTotal').textContent = fmt(sd.price + SHIPPING); }
+  document.querySelectorAll('#fulfillOptions .pay-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      document.querySelectorAll('#fulfillOptions .pay-option').forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+      state.fulfill = opt.dataset.fulfill;
+      document.getElementById('addressField').style.display = state.fulfill === 'pickup' ? 'none' : 'block';
+      updateCheckout();
+    });
+  });
+  document.querySelectorAll('#payOptions .pay-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      document.querySelectorAll('#payOptions .pay-option').forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+      state.pay = opt.dataset.pay;
+    });
+  });
+  function updateCheckout() {
+    const sd = sizeData[state.size];
+    const shipping = state.fulfill === 'pickup' ? 0 : SHIPPING;
+    document.getElementById('coSize').textContent = 'Bolsa ' + sd.name + ' ' + sd.weight;
+    document.getElementById('coSubtotal').textContent = fmt(sd.price);
+    document.getElementById('coCandies').textContent = state.flavors.length + ' ' + (state.flavors.length === 1 ? 'gusto elegido' : 'gustos elegidos');
+    document.getElementById('coShippingLabel').textContent = state.fulfill === 'pickup' ? 'Retiro en punto' : 'Env\u00EDo (Rappi \u00B7 CABA)';
+    document.getElementById('coShippingVal').textContent = shipping === 0 ? 'Gratis' : fmt(shipping);
+    document.getElementById('coTotal').textContent = fmt(sd.price + shipping);
+    // Prellenar si hay sesi\u00F3n activa
+    const user = getCurrentUser();
+    if (user) {
+      document.getElementById('inputName').value = user.name;
+      document.getElementById('inputEmail').value = user.email;
+      document.getElementById('inputPhone').value = user.phone;
+    }
+  }
+  function validateCheckout() {
+    const name = document.getElementById('inputName').value.trim();
+    const email = document.getElementById('inputEmail').value.trim();
+    const phone = document.getElementById('inputPhone').value.trim();
+    const address = document.getElementById('inputAddress').value.trim();
+    const errBox = document.getElementById('checkoutError');
+    const missing = [];
+    if (!name) missing.push('nombre');
+    if (!email) missing.push('email');
+    if (!phone) missing.push('tel\u00E9fono');
+    if (state.fulfill !== 'pickup' && !address) missing.push('direcci\u00F3n');
+    if (missing.length > 0) {
+      errBox.style.display = 'block';
+      errBox.textContent = 'Complet\u00E1 estos campos obligatorios: ' + missing.join(', ') + '.';
+      return false;
+    }
+    errBox.style.display = 'none';
+    return true;
+  }
   function proceedPayment() {
+    if (!validateCheckout()) return;
     if (state.pay === 'transfer') {
       const sd = sizeData[state.size];
-      document.getElementById('trAmount').textContent = fmt(sd.price + SHIPPING);
+      const shipping = state.fulfill === 'pickup' ? 0 : SHIPPING;
+      document.getElementById('trAmount').textContent = fmt(sd.price + shipping);
       goTo('transfer');
     } else if (state.pay === 'mp') {
       goTo('mp');
@@ -635,18 +777,126 @@
     }
   }
   function copyText(text, btn) { navigator.clipboard.writeText(text).then(() => { const orig = btn.textContent; btn.textContent = '\u00A1Copiado!'; setTimeout(() => { btn.textContent = orig; }, 1500); }).catch(() => { btn.textContent = '\u00A1Copiado!'; setTimeout(() => { btn.textContent = 'Copiar'; }, 1500); }); }
+
+  // ============ CUENTA / FIDELIZACI\u00D3N (localStorage) ============
+  function getUsers() { try { return JSON.parse(localStorage.getItem('cc_users') || '{}'); } catch(e) { return {}; } }
+  function saveUsers(u) { localStorage.setItem('cc_users', JSON.stringify(u)); }
+  function getSession() { return localStorage.getItem('cc_session') || null; }
+  function setSession(email) { if (email) localStorage.setItem('cc_session', email); else localStorage.removeItem('cc_session'); }
+  function getCurrentUser() { const email = getSession(); if (!email) return null; const users = getUsers(); return users[email] || null; }
+
+  function openAccount() { goTo('account'); renderAccountScreen(); }
+  function renderAccountScreen() {
+    const user = getCurrentUser();
+    if (user) {
+      document.getElementById('accountLoggedOut').style.display = 'none';
+      document.getElementById('accountLoggedIn').style.display = 'block';
+      document.getElementById('accGreetName').textContent = user.name.split(' ')[0];
+      document.getElementById('profName').textContent = user.name;
+      document.getElementById('profEmail').textContent = user.email;
+      document.getElementById('profPhone').textContent = user.phone;
+      document.getElementById('profOrders').textContent = user.history.length;
+      const stamps = user.history.length % 5;
+      document.getElementById('loyaltyStamps').textContent = stamps;
+      const row = document.getElementById('stampRow');
+      row.innerHTML = '';
+      for (let i = 0; i < 5; i++) {
+        const s = document.createElement('div');
+        s.className = 'stamp' + (i < stamps ? ' filled' : '');
+        s.innerHTML = i < stamps ? '&#9829;' : '';
+        row.appendChild(s);
+      }
+      const msgEl = document.getElementById('loyaltyMsg');
+      if (stamps === 0 && user.history.length > 0) msgEl.textContent = '\u00A1Canjeaste tu bolsa gratis! Empezamos una nueva tarjeta.';
+      else if (stamps === 0) msgEl.textContent = 'Compr\u00E1 una bolsa y sum\u00E1 tu primer sello.';
+      else msgEl.textContent = 'Te faltan ' + (5 - stamps) + ' compra' + (5 - stamps === 1 ? '' : 's') + ' para tu bolsa gratis.';
+      const histList = document.getElementById('historyList');
+      if (user.history.length === 0) {
+        histList.innerHTML = '<li class="summary-empty">Todav\u00EDa no hiciste ning\u00FAn pedido.</li>';
+      } else {
+        histList.innerHTML = user.history.slice().reverse().map(h =>
+          '<li><span>' + h.order + ' \u00B7 ' + h.size + '</span><span>' + h.total + '</span></li>'
+        ).join('');
+      }
+    } else {
+      document.getElementById('accountLoggedOut').style.display = 'block';
+      document.getElementById('accountLoggedIn').style.display = 'none';
+      document.getElementById('accError').style.display = 'none';
+    }
+  }
+  function loginOrRegister() {
+    const name = document.getElementById('accName').value.trim();
+    const email = document.getElementById('accEmail').value.trim().toLowerCase();
+    const phone = document.getElementById('accPhone').value.trim();
+    const errBox = document.getElementById('accError');
+    if (!email) { errBox.style.display = 'block'; errBox.textContent = 'Ingres\u00E1 tu email para continuar.'; return; }
+    const users = getUsers();
+    if (users[email]) {
+      setSession(email);
+    } else {
+      if (!name || !phone) { errBox.style.display = 'block'; errBox.textContent = 'Para crear tu cuenta necesitamos nombre, email y tel\u00E9fono.'; return; }
+      users[email] = { name, email, phone, history: [] };
+      saveUsers(users);
+      setSession(email);
+    }
+    renderAccountScreen();
+  }
+  function logoutAccount() { setSession(null); renderAccountScreen(); }
+  function registerOrder(orderNumber, totalText) {
+    const email = getSession();
+    if (!email) return;
+    const users = getUsers();
+    const user = users[email];
+    if (!user) return;
+    const sd = sizeData[state.size];
+    user.history.push({ order: orderNumber, size: sd.name, total: totalText });
+    users[email] = user;
+    saveUsers(users);
+  }
+
   function confirmOrder() {
     const name = document.getElementById('inputName').value.trim();
+    const phone = document.getElementById('inputPhone').value.trim();
     state.name = name ? name.split(' ')[0] : 'amig@';
+    state.phone = phone;
     document.getElementById('confirmName').textContent = state.name;
     const num = String(Math.floor(Math.random() * 900) + 100);
-    document.getElementById('orderNumber').textContent = '#CC-2026-' + num;
-    if (state.pay === 'transfer') { document.getElementById('confirmText').textContent = 'Recibimos tu pedido. Envianos el comprobante de transferencia por WhatsApp y preparamos tu bolsa apenas lo verifiquemos. Te avisamos cuando salga el env\u00EDo.'; }
-    else if (state.pay === 'mp') { document.getElementById('confirmText').textContent = 'Tu pago con Mercado Pago fue aprobado. Ya estamos armando tu bolsa. Te avisamos por WhatsApp apenas salga el env\u00EDo.'; }
-    else { document.getElementById('confirmText').textContent = 'Tu pedido est\u00E1 confirmado. Pag\u00E1s en efectivo cuando recib\u00EDs tu bolsa. Te avisamos por WhatsApp apenas salga el env\u00EDo. Llega en menos de 2 horas.'; }
+    const orderNumber = '#CC-2026-' + num;
+    document.getElementById('orderNumber').textContent = orderNumber;
+    const sd = sizeData[state.size];
+    const shipping = state.fulfill === 'pickup' ? 0 : SHIPPING;
+    registerOrder(orderNumber, fmt(sd.price + shipping));
+
+    let msg = '';
+    if (state.pay === 'transfer') msg = 'Recibimos tu pedido. Envianos el comprobante de transferencia por WhatsApp y preparamos tu bolsa apenas lo verifiquemos.';
+    else if (state.pay === 'mp') msg = 'Tu pago con Mercado Pago fue aprobado. Ya estamos armando tu bolsa.';
+    else msg = 'Tu pedido est\u00E1 confirmado. Pag\u00E1s en efectivo cuando recib\u00EDs tu bolsa.';
+
+    const waBtn = document.getElementById('confirmWaBtn');
+    if (state.fulfill === 'pickup') {
+      msg += ' Coordin\u00E1 el horario de retiro por WhatsApp tocando el bot\u00F3n de abajo.';
+      const waMsg = encodeURIComponent('\u00A1Hola Candy Crash! Quiero coordinar el retiro de mi pedido ' + orderNumber + '.');
+      waBtn.href = 'https://wa.me/5491123569531?text=' + waMsg;
+      waBtn.style.display = 'inline-flex';
+    } else {
+      msg += ' Te avisamos por WhatsApp apenas salga el env\u00EDo.';
+      waBtn.style.display = 'none';
+    }
+    document.getElementById('confirmText').textContent = msg;
     goTo('confirm');
   }
-  function resetAndHome() { state.size = 'mediana'; state.flavors = []; state.pay = 'mp'; state.name = ''; selectSize('mediana'); document.querySelectorAll('.pay-option').forEach((o,i) => o.classList.toggle('selected', i===0)); ['inputName','inputAddress','inputPhone','inputEmail','giftMessage'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; }); currentFilter = 'all'; document.querySelectorAll('.brand-chip').forEach((c,i) => c.classList.toggle('active', i===0)); renderVarieties(); renderSummary(); goTo('home'); }
+  function resetAndHome() {
+    state.size = 'mediana'; state.flavors = []; state.pay = 'mp'; state.fulfill = 'delivery'; state.name = '';
+    selectSize('mediana');
+    document.querySelectorAll('#payOptions .pay-option').forEach((o,i) => o.classList.toggle('selected', i===0));
+    document.querySelectorAll('#fulfillOptions .pay-option').forEach((o,i) => o.classList.toggle('selected', i===0));
+    document.getElementById('addressField').style.display = 'block';
+    document.getElementById('checkoutError').style.display = 'none';
+    ['inputName','inputAddress','inputPhone','inputEmail','giftMessage'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+    currentFilter = 'all';
+    document.querySelectorAll('.brand-chip').forEach((c,i) => c.classList.toggle('active', i===0));
+    renderVarieties(); renderSummary(); goTo('home');
+  }
   document.querySelectorAll('.faq-q').forEach(q => { q.addEventListener('click', () => q.parentElement.classList.toggle('open')); });
   buildBrandFilter(); renderVarieties(); renderSummary();
 </script>
